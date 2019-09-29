@@ -13,16 +13,17 @@ class HomeTableViewController: UITableViewController {
     @IBOutlet var tweetTableView: UITableView!
     var tweetArray = [NSDictionary]()
     var tweetCount: Int!
+    var refreshController = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Add 'Pull to Refresh' functionality
+        refreshController.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshController.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        tableView.addSubview(refreshController)
+        
         loadTweets()
-    }
-
-    @IBAction func onLogout(_ sender: Any) {
-        TwitterAPICaller.client?.logout()
-        self.dismiss(animated: true, completion: nil)
-        UserDefaults.standard.set(false, forKey: "userLoggedIn")
     }
 
     func loadTweets() {
@@ -34,10 +35,6 @@ class HomeTableViewController: UITableViewController {
                 self.tweetArray.removeAll()
                 for tweet in tweets {
                     self.tweetArray.append(tweet)
-//                    print(tweet["text"])
-                }
-                for tweet in self.tweetArray {
-                    print(tweet["text"])
                 }
                 print(self.tweetArray.count)
                 self.tableView.reloadData()
@@ -47,9 +44,20 @@ class HomeTableViewController: UITableViewController {
             }
         )
     }
+    
+    @IBAction func onLogout(_ sender: Any) {
+        TwitterAPICaller.client?.logout()
+        self.dismiss(animated: true, completion: nil)
+        UserDefaults.standard.set(false, forKey: "userLoggedIn")
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+    }
+    
+    @objc func refresh(sender:AnyObject) {
+        loadTweets()
+        refreshController.endRefreshing()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

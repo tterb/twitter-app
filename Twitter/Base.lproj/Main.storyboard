@@ -70,20 +70,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="107"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gXx-sE-qLS">
-                                            <rect key="frame" x="16" y="13" width="81" height="81"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="81" id="IlF-Z2-J6k"/>
-                                            </constraints>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKh-FJ-ztq">
-                                            <rect key="frame" x="109" y="38" width="250" height="56"/>
+                                            <rect key="frame" x="102" y="38" width="257" height="56"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kE-sI-8nk">
-                                            <rect key="frame" x="109" y="13" width="250" height="23"/>
+                                            <rect key="frame" x="102" y="13" width="257" height="23"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="23" id="btj-xJ-joG"/>
                                             </constraints>
@@ -91,9 +85,15 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gXx-sE-qLS">
+                                            <rect key="frame" x="8" y="13" width="81" height="81"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="81" id="IlF-Z2-J6k"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="gXx-sE-qLS" firstAttribute="leading" secondItem="XaB-Xf-Zcx" secondAttribute="leadingMargin" id="2DJ-j7-9w8"/>
+                                        <constraint firstItem="gXx-sE-qLS" firstAttribute="leading" secondItem="XaB-Xf-Zcx" secondAttribute="leadingMargin" constant="-8" id="2DJ-j7-9w8"/>
                                         <constraint firstItem="gXx-sE-qLS" firstAttribute="top" secondItem="XaB-Xf-Zcx" secondAttribute="topMargin" constant="2" id="7cv-rl-Uh4"/>
                                         <constraint firstItem="gXx-sE-qLS" firstAttribute="top" secondItem="XaB-Xf-Zcx" secondAttribute="topMargin" constant="2" id="8E4-LM-2Nh"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="oKh-FJ-ztq" secondAttribute="bottom" constant="2" id="Rnc-2G-o7c"/>
@@ -103,8 +103,8 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="oKh-FJ-ztq" secondAttribute="bottom" constant="2" id="mip-KB-uSF"/>
                                         <constraint firstItem="3kE-sI-8nk" firstAttribute="trailing" secondItem="oKh-FJ-ztq" secondAttribute="trailing" id="mv5-Mn-l8f"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="gXx-sE-qLS" secondAttribute="bottom" constant="2" id="pk1-oW-9SA"/>
-                                        <constraint firstItem="oKh-FJ-ztq" firstAttribute="leading" secondItem="gXx-sE-qLS" secondAttribute="trailing" constant="12" id="uCw-wq-Awi"/>
-                                        <constraint firstItem="3kE-sI-8nk" firstAttribute="leading" secondItem="gXx-sE-qLS" secondAttribute="trailing" constant="12" id="xF8-yg-9P2"/>
+                                        <constraint firstItem="oKh-FJ-ztq" firstAttribute="leading" secondItem="gXx-sE-qLS" secondAttribute="trailing" constant="13" id="uCw-wq-Awi"/>
+                                        <constraint firstItem="3kE-sI-8nk" firstAttribute="leading" secondItem="gXx-sE-qLS" secondAttribute="trailing" constant="13" id="xF8-yg-9P2"/>
                                         <constraint firstItem="3kE-sI-8nk" firstAttribute="top" secondItem="XaB-Xf-Zcx" secondAttribute="topMargin" constant="2" id="xSe-jX-2pE"/>
                                     </constraints>
                                 </tableViewCellContentView>
