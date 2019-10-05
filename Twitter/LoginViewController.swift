@@ -10,8 +10,12 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginButton.layer.cornerRadius = 6
+        loginButton.clipsToBounds = true
     }
     
     override func viewDidAppear(_ animated: Bool) {

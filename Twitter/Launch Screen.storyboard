@@ -18,11 +18,14 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_image" translatesAutoresizingMaskIntoConstraints="NO" id="Mee-Eg-FPf">
                                 <rect key="frame" x="22" y="90" width="331" height="332"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Mee-Eg-FPf" secondAttribute="height" multiplier="331:332" id="wKb-90-wjN"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.63137254901960782" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="Mee-Eg-FPf" secondAttribute="bottom" constant="245" id="DYV-Aj-czq"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Mee-Eg-FPf" secondAttribute="bottom" constant="90" id="DYV-Aj-czq"/>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="Mee-Eg-FPf" secondAttribute="trailing" constant="22" id="YFd-0y-3Wv"/>
                             <constraint firstItem="Mee-Eg-FPf" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="22" id="fpD-JJ-BY9"/>
                             <constraint firstItem="Mee-Eg-FPf" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="90" id="sqV-f6-f6C"/>

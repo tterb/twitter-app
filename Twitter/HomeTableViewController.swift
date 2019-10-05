@@ -10,7 +10,6 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
     
-    @IBOutlet var tweetTableView: UITableView!
     var tweetArray = [NSDictionary]()
     var tweetCount: Int!
     var refreshController = UIRefreshControl()
@@ -22,8 +21,11 @@ class HomeTableViewController: UITableViewController {
         refreshController.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshController.addTarget(self, action: #selector(refresh), for: .valueChanged)
         tableView.addSubview(refreshController)
-        
-        loadTweets()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.loadTweets()
     }
 
     func loadTweets() {
