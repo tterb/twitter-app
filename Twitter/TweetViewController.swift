@@ -35,11 +35,10 @@ class TweetViewController: UIViewController, UITextViewDelegate {
 
     func textViewDidChange(_ textView: UITextView) {
         let count = textView.text.count
+        charCount.text = String(140 - count)
         if (count <= 140) {
-            charCount.text = String(count)
             charCount.textColor = UIColor.gray
         } else {
-            charCount.text = String(140 - count)
             charCount.textColor = UIColor.red
         }
     }
